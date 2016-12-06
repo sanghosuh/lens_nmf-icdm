@@ -1,7 +1,7 @@
 # Presentation slides for L-EnsNMF @ ICDM'16 (Barcelona, Spain)
 
 
-The paper and code can be found [here](http://sanghosuh.github.io/data/lens_nmf_icdm.pdf) and [there](github.com/sanghosuh/lens_nmf-matlab), respectively.
+The paper and code can be found [here](http://sanghosuh.github.io/data/lens_nmf_icdm.pdf) and [there](https://github.com/sanghosuh/lens_nmf-matlab), respectively.
 
 Full citation is as follows.
 
