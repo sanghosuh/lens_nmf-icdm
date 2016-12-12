@@ -88,7 +88,7 @@
 
 				</section> 
 				<section>
-					<section data-transition="convex">
+					<section data-transition="concave">
 						<h3> Proposed Solution<br>(Intuition)</h3>
 					</section>
 					<section data-transition="fade">
@@ -103,14 +103,15 @@
 					<section data-transition="fade">
 						<img src="./img/demo_final.png" alt="Demo Final">
 					</section>
-					<section>
+					<section data-transition="concave">
 						<img src="./img/intuition.png" alt="LEnsNMF">
 						<br>
-						<p style="text-align:left; font-size:1.1em">
-							<span class="fragment fade-in" data-fragment-index="1"> 1) ITERATE </span> <span class="fragment fade-in" data-fragment-index="3"> -> <strong>Ensemble of NMF</strong></span> <br>
-							<span class="fragment fade-in" data-fragment-index="2"> 2) BOOST & SUPPRESS <span class="fragment fade-in" data-fragment-index="4"> -> <strong>Local weighting scheme</strong></span> </span>	
-							<br>
-							<span class="fragment fade-in" style="font-size:0.9em" data-fragment-index="5"> => Localized Ensemble of Nonnegative Matrix Factorization 
+						<p style="text-align:left; font-size:0.9em">
+							<span class="fragment fade-in" data-fragment-index="1">For local topic discovery,</span> <br>
+							<span class="fragment fade-in" data-fragment-index="2"> 1) Iterate </span> <span class="fragment fade-in" data-fragment-index="4"> -> <strong>Ensemble of NMF</strong></span> <br>
+							<span class="fragment fade-in" data-fragment-index="3"> 2) Boost & Suppress <span class="fragment fade-in" data-fragment-index="5"> -> <strong>Local weighting scheme</strong></span> </span>	
+							<br><br>
+							<span class="fragment fade-in" style="font-size:1.1em" data-fragment-index="6"> => Localized Ensemble of Nonnegative Matrix Factorization 
 							<br>
 							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<strong>L-EnsNMF</strong>)</span>	
 						</p>
@@ -150,17 +151,17 @@
 					<section>
 						<span style="font-size:1.3em"><strong style="color:black">Residual Matrix</strong></span><br><br>
 						<img src="img/residual_matrix.png">
-						Find unexplained topics using residual matrix, R
+						<strong>Find</strong> unexplained topics using residual matrix, R
 					</section>							
 					<section>
 						<span style="font-size:1.3em"><strong style="color:black">Anchor Sampling</strong></span><br><br>
 						<img src="img/anchor_sampling.png">
-						Sample unexplained document(<em>col</em>) & keyword(<em>row</em>)
+						<strong>Sample</strong> unexplained document(<em>col</em>) & keyword(<em>row</em>)
 					</section>												
 					<section>
 						<span style="font-size:1.3em"><strong style="color:black">Local Weighting</strong></span><br><br>
 						<img src="img/local_weighting.png">
-						Reveal local topics & suppress global topics
+						<strong>Reveal</strong> local topics & suppress global topics
 					</section>															
 					<section>
 						<span style="font-size:1.3em"><strong style="color:black">Ensemble on Gradient Boosting</strong></span><br><br>
@@ -169,20 +170,20 @@
 					</section>
 				</section>
 				<section>
-					<section data-transition="concave">
+					<section data-transition="convex">
 						<h3> Proposed Solution <br>(Quantitative Experiment) </h3>
 					</section>
-					<section data-transition="concave">
+					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Topic Coherence</strong></span>
 						<img src="./img/topic_coherence2.png" style="width:80%" alt="Topic Coherence"><br>
 						<strong>L-EnsNMF</strong> generates topics of high-quality regardless of<br>the number of topics and datasets
 					</section>
-					<section data-transition="concave">
+					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Total Document Coverage</strong></span>
 						<img src="./img/total_doc_cvrg.png" alt="Total Document Coverage">
 						Topics by <strong>L-EnsNMF</strong> become more and more diverse <br>as the number of topics increases
 					</section>							
-					<section data-transition="concave">
+					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Computing Time</strong></span>
 						<img src="./img/computing_time.png" alt="Computing Time" style="width:70%"><br>
 						<strong>L-EnsNMF</strong> runs fastest and is the most scalable <br>(cf. Fast Rank-2)
@@ -190,17 +191,17 @@
 					</section>
 				</section>	
 				<section>
-					<section data-transition="zoom">
+					<section data-transition="convex">
 						<h3> Proposed Solution <br>(Qualitative Experiment) </h3>
 					</section>
-					<section data-transition="zoom">
+					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Local Topic Discovery</strong></span>
 						<img src="./img/qualitative_exp.png" alt="Qualitative Experiment">
 						<p style="font-size:0.8em">
 							 We generated 100 topics (10 keywords each) but only <strong>L-EnsNMF</strong> extracted local, specific keywords, e.g., ‘<strong style="color:black">hurrican</strong>’, ‘<strong style="color:black">sandi</strong>’, ‘<strong style="color:black">ireland</strong>.’
 						</p>
 					</section>
-					<section data-transition="zoom">
+					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Local Topic Discovery</strong></span>
 						<img src="./img/qualitative_exp_ex.png" alt="Example for Qualitative Experiment">
 						<br>
@@ -210,10 +211,10 @@
 					</section>
 				</section>					
 				<section>
-					<section data-transition="slide">
+					<section data-transition="convex">
 						<h3>Conclusion</h3>
 					</section>
-					<section data-transition="slide">
+					<section data-transition="convex">
 						<span style="font-size:1.3em">
 							<span style="font-size:1.3em"><strong style="color:black">Summary</strong></span><br><br>
 							<ul>
