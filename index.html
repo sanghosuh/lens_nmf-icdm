@@ -141,31 +141,32 @@
 						<span style="font-size:1.3em"><strong style="color:black">Overview of <strong>L-EnsNMF</strong></strong></span><br>
 						<img src="./img/overview.png" alt="Overview">
 						<p style="text-align:left; font-size:0.9em">
-							<span class="fragment fade-in" data-fragment-index="1"> 1) Residual Update </span> <span class="fragment fade-in" data-fragment-index="2"> -> <strong>Find unexplained parts</strong> (e.g. egyptian cat)</span> 
+							<span class="fragment fade-in" data-fragment-index="1"> 1) Residual Update </span> <br><span class="fragment fade-in" data-fragment-index="2"> -> <strong>Find unexplained parts</strong> (e.g. egyptian cat)</span> 
 							<br>
 							<span class="fragment fade-in" data-fragment-index="3"> 2) Anchor Sampling & Local weighting <span class="fragment fade-in" data-fragment-index="4"> <br>-> <strong>Reveal unexplained parts and suppress explained parts</strong></span> </span>
 							<br>
-							<span class="fragment fade-in" data-fragment-index="5"> 3) Ensemble <span class="fragment fade-in" data-fragment-index="6">-> <strong>Repeat this iteration</strong></span> </span>				
+							<span class="fragment fade-in" data-fragment-index="5"> 3) Ensemble <br><span class="fragment fade-in" data-fragment-index="6">-> <strong>Repeat this process</strong></span> </span>				
 						</p>
 					</section>		
 					<section>
-						<span style="font-size:1.3em"><strong style="color:black">Residual Matrix</strong></span><br><br>
+						<span style="font-size:1.3em"><strong style="color:black">Residual Update</strong></span><br><br>
 						<img src="img/residual_matrix.png">
-						<strong>Find</strong> unexplained topics using residual matrix, R
+						<!-- Residual values represent <strong style="color:black">unexplained</strong> parts -->
+						<strong style="color:black">Find</strong> unexplained parts using residual matrix, R
 					</section>							
 					<section>
 						<span style="font-size:1.3em"><strong style="color:black">Anchor Sampling</strong></span><br><br>
 						<img src="img/anchor_sampling.png">
-						<strong>Sample</strong> unexplained document(<em>col</em>) & keyword(<em>row</em>)
+						<strong style="color:black">Sample</strong> unexplained document(<em>col</em>) & keyword(<em>row</em>)
 					</section>												
 					<section>
 						<span style="font-size:1.3em"><strong style="color:black">Local Weighting</strong></span><br><br>
 						<img src="img/local_weighting.png">
-						<strong>Reveal</strong> local topics & suppress global topics
+						<strong style="color:black">Reveal</strong> local topics & suppress global topics
 					</section>															
 					<section>
 						<span style="font-size:1.3em"><strong style="color:black">Ensemble on Gradient Boosting</strong></span><br><br>
-						Repeat using gradient (i.e., residual values)<br><br>
+						<strong style="color:black">Repeat</strong> using gradient (i.e., residual values)<br><br>
 						<img src="img/overview.png">
 					</section>
 				</section>
