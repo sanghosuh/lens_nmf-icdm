@@ -28,24 +28,28 @@
 			<div class="slides">
 				<section>
 					<p style="font-size:1.3em"> <strong>L-EnsNMF</strong>: Boosted Local Topic Discovery via <br>Ensemble of Nonnegative Matrix Factorization </p><br>
-					<p> 
-						<strong>Sangho Suh</strong>, <span style="color:#b90504">Jaegul Choo</span>, <span style="color:cornflowerblue">Joonseok Lee</span>, <span style="color:darkorange">Chandan K. Reddy</span> <br>
-						<br>
+					<p style="font-size:1em"> 
+						<!-- <strong>Sangho Suh</strong><sup>1</sup>, <span style="color:#b90504">Jaegul Choo</span><sup>1</sup>, <span style="color:cornflowerblue">Joonseok Lee</span><sup>2</sup>, <span style="color:darkorange">Chandan K. Reddy</span><sup>3</sup> <br>
+						<br> -->
+						Sangho Suh<sup>1</sup>, Jaegul Choo<sup>1</sup>, <br>Joonseok Lee<sup>2</sup>, Chandan K. Reddy<sup>3</sup>
 						<!-- <span style="color:darkred">Korea University</span> | <span style="color:cornflowerblue">Google Research</span> | <span style="color:darkorange">Virginia Tech</span> -->
+					<br><br>
+					</p>
+					<p style="font-size:0.8em">
+						<sup>1</sup>Korea University, <sup>2</sup>Research at Google, <sup>3</sup>Virginia Tech
 					</p>	
-
-						<img src="img/korea_univ.png"><img src="img/google_research.png" style="width:38%;margin-right:12px; margin-left:8px"><img src="img/virginia_tech.png" style="width:30%">
+						<!-- <img src="img/korea_univ.png"><img src="img/google_research.png" style="width:38%;margin-right:12px; margin-left:8px"><img src="img/virginia_tech.png" style="width:30%"> -->
 				</section>
-					<section>
-					<h3>Table of Contents</h3>
-					<br>
-					<ul>
-						<li>Motivation</li>
-						<li>Proposed Solution</li>
-						<li>Conclusion</li>	
-					</ul>			
-					<br>
-				    </section>
+	<!-- 				<section>
+						<h3>Table of Contents</h3>
+						<br>
+						<ul>
+							<li>Motivation</li>
+							<li>Proposed Method</li>
+							<li>Conclusion</li>	
+						</ul>			
+						<br>
+				    </section> -->
 				<section>
 					<section data-transition="convex">
 						<h3>Motivation</h3>
@@ -59,18 +63,18 @@
 						<img src="./img/global_topic_modeling.png" alt="Global Topic Modeling">
 					</section>
 					<section data-transition="convex">
-						<span style="font-size:1.3em"><strong style="color:black">Global vs Local</strong></span>
+						<span style="font-size:1.3em"><strong style="color:black">Global vs. Local Topic</strong></span>
 						<img src="./img/motivation.png" alt="motivation">
 					</section>
 					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Problem</strong></span><br><br>
-						Existing topic modeling algorithms provide users <br><strong>global topics</strong> that give <strong>general, redundant</strong> information
+						Existing topic modeling algorithms provide users with <br><strong>global topics</strong> that give <strong>general, redundant</strong> information
 					</section>					
 					<section data-transition="convex">
 						<p style="font-size:1.3em">
-						<span style="font-size:1.3em"><strong style="color:black">Idea</strong></span><br><br>
+						<span style="font-size:1.3em"><strong style="color:black">Proposed Idea</strong></span><br><br>
 							<strong>Local topic discovery</strong> to extract <br>
-							more specific, informative topics?							
+							more specific, informative topics							
 						</p>
 					</section>
 <!-- 					<section>
@@ -89,7 +93,7 @@
 				</section> 
 				<section>
 					<section data-transition="concave">
-						<h3> Proposed Solution<br>(Intuition)</h3>
+						<h3> Proposed Method<br>(Intuition)</h3>
 					</section>
 					<section data-transition="fade">
 						<img src="./img/demo1.png" alt="Demo1">
@@ -119,7 +123,7 @@
 				</section>
 				<section>
 					<section>
-						<h3>Proposed Solution<br>(Details)</h3>
+						<h3>Proposed Method<br>(Details)</h3>
 					</section>
 <!-- 					<section>					
 					    <p style="font-size:1.4em">Two approaches</p>
@@ -172,7 +176,7 @@
 				</section>
 				<section>
 					<section data-transition="convex">
-						<h3> Proposed Solution <br>(Quantitative Experiment) </h3>
+						<h3> Proposed Method <br>(Quantitative Experiment) </h3>
 					</section>
 					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Topic Coherence</strong></span>
@@ -193,7 +197,7 @@
 				</section>	
 				<section>
 					<section data-transition="convex">
-						<h3> Proposed Solution <br>(Qualitative Experiment) </h3>
+						<h3> Proposed Method <br>(Qualitative Experiment) </h3>
 					</section>
 					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Local Topic Discovery</strong></span>
