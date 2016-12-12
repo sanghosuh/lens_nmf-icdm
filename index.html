@@ -32,141 +32,185 @@
 						<strong>Sangho Suh</strong>, <span style="color:#b90504">Jaegul Choo</span>, <span style="color:cornflowerblue">Joonseok Lee</span>, <span style="color:darkorange">Chandan K. Reddy</span> <br>
 						<br>
 						<!-- <span style="color:darkred">Korea University</span> | <span style="color:cornflowerblue">Google Research</span> | <span style="color:darkorange">Virginia Tech</span> -->
-
 					</p>	
 
 						<img src="img/korea_univ.png"><img src="img/google_research.png" style="width:38%;margin-right:12px; margin-left:8px"><img src="img/virginia_tech.png" style="width:30%">
 				</section>
-				<section>
+					<section>
 					<h3>Table of Contents</h3>
 					<br>
 					<ul>
-						<li>Background</li>
 						<li>Motivation (<em>why</em>)</li>
 						<li>Proposed Solution (<em>what</em>)</li>
-						<li>Usage Scenario (<em>how</em>)</li>	
-						<li>Q & A</li>
+						<li>Future Work(<em>how</em>)</li>	
 					</ul>			
 					<br>
-					<!-- <p style="font-size:0.7em"> * I maintain <strong>why->what->how</strong> flow for <strong style="color:black">delivery</strong></p>		 -->
-				</section>					
+				    </section>
 				<section>
+					<section><h3>Motivation</h3></section>
 					<section>
-						<h3> Background </h3>
+						Topic Modeling
+						<img src="./img/topic_modeling.png" alt="Global Topic Modeling">
+					</section>					
+					<section>
+						Global Topic Discovery
+						<img src="./img/global_topic_modeling.png" alt="Global Topic Modeling">
 					</section>
 					<section>
-						<p> Topic Modeling </p>
-						<img src="img/background2.png">
+						Global vs Local
+						<img src="./img/motivation.png" alt="motivation">
+					</section>
+					<section>
+						<strong style="color:black">Problem</strong> | Existing topic modeling algorithms provide users <br><strong>global topics</strong> that give <strong>general, redundant</strong> information
+					</section>					
+					<section>
+						<p style="font-size:1.3em">
+							<strong>Local topic discovery</strong> to extract <br>
+							more specific, informative topics?							
+						</p>
+					</section>
+<!-- 					<section>
+						<img src="./img/problem.png" alt="problem">
+						<p style="font-size:0.7em">
+							Sampled topics from papers containing keywords, ‘<strong>dimension</strong>’ or ‘<strong>reduction</strong>’	
+						</p>						
+					</section>    
+					<section>						
+						<img src="./img/problem.png" alt="problem">
+						<p style="font-size:0.7em">
+							They return <strong style="color:black">redundant</strong>, <strong style="color:black">uninformative</strong> keywords, such as <br> '<strong>multi dimension</strong>,' '<strong>dimension reduct</strong>,' '<strong>high dimension</strong>'						
+						</p>
+					</section>   	 -->				
 
-					</section>		
-					<section>					
+				</section> 
+				<section>
+					<section>
+						<h3> Proposed Solution<br>(Intuition)</h3>
+					</section>
+					<section>
+						<img src="./img/demo1.png" alt="Demo1">
+					</section>
+					<section>
+						<img src="./img/demo2.png" alt="Demo1">
+					</section>
+					<section>
+						<img src="./img/demo3.png" alt="Demo1">
+					</section>
+					<section>
+						<img src="./img/demo_final.png" alt="Demo1">
+					</section>
+					<section>
+						<img src="./img/intuition.png" alt="LEnsNMF">
+						<br>
+						<p style="text-align:left; font-size:1.1em">
+							<span class="fragment fade-in" data-fragment-index="1"> 1) ITERATE </span> <span class="fragment fade-in" data-fragment-index="3"> -> <strong>Ensemble of NMF</strong></span> <br>
+							<span class="fragment fade-in" data-fragment-index="2"> 2) BOOST & SUPPRESS <span class="fragment fade-in" data-fragment-index="4"> -> <strong>Local weighting scheme</strong></span> </span>	
+							<br>
+							<span class="fragment fade-in" data-fragment-index="5"> => Localized Ensemble of Nonnegative Matrix Factorization (<strong>L-EnsNMF</strong>)</span>	
+						</p>
+					</section>					
+				</section>
+				<section>
+					<section>
+						<h3>Proposed Solution<br>(Details)</h3>
+					</section>
+<!-- 					<section>					
 					    <p style="font-size:1.4em">Two approaches</p>
 					    <br>
 					    <p class="fragment shrink" data-fragment-index="1">1. Probabilistic (e.g. LDA)</p>
-					    <p class="fragment highlight-green" data-fragment-index="1">2. Matrix factorization (e.g. NMF)</p>
-					</section>				
+					    <p class="fragment highlight-blue" data-fragment-index="1">2. Mathematical (e.g. NMF)</p>
+					</section>				 -->
 					<section>
-						<p> Nonnegative Matrix Factorization (NMF)</p>
-						<br>
-						<ul>
-							<li><span class="fragment highlight"> Nonnegative</span> means all the elements in the matrix has to be nonnegative</p></li> 
-							<li>In other words, anything that is <span class="fragment highlight">negative</span> is round up to <span class="fragment highlight">0</span></li>
-							<li>It improves(?) <span class="fragment highlight">interpretability</span> (i.e. eliminates the need to interpret <span class="fragment highlight">negative values</span>) </li>
-							<li>Compared to probabilistic model, the results are NOT <span class="fragment highlight">random</span></li>
-						</ul>	
+						Nonnegative Matrix Factorization (NMF)
+						<img src="./img/nmf.png" alt="NMF for topic modeling">
+					</section>					
+					<section>
+						NMF for Topic Modeling
+						<img src="./img/nmf_for_topic_modeling1.png" alt="NMF for topic modeling" style="width:65%"><br>
+						<img class="fragment fade-in" src="./img/arrow-down.png" style="width:2%"><br>
+						<img class="fragment fade-in" src="./img/nmf_for_topic_modeling2.png" style="width:25%">
+					</section>						
+					<section>
+						<h3>Overview</h3>
+						<img src="./img/overview.png" alt="Overview">
+						<p style="text-align:left; font-size:0.9em">
+							<span class="fragment fade-in" data-fragment-index="1"> 1) Residual Update </span> <span class="fragment fade-in" data-fragment-index="2"> -> <strong>Find unexplained parts</strong></span> 
+							<br>
+							<span class="fragment fade-in" data-fragment-index="3"> 2) Anchor Sampling & Local weighting <span class="fragment fade-in" data-fragment-index="4"> <br>-> <strong>Reveal unexplained parts and suppress explained parts</strong></span> </span>
+							<br>
+							<span class="fragment fade-in" data-fragment-index="4"> 3) Ensemble <span class="fragment fade-in" data-fragment-index="5">-> <strong>Repeat this iteration</strong></span> </span>				
+						</p>
 					</section>		
+					<section>
+						<h3> Residual Matrix </h3>										
+						Find <span class="fragment highlight">un</span>explained topics using residual matrix, R
+						<img src="img/residual_matrix.png">
+					</section>							
+					<section>
+						<h3> Anchor Sampling </h3>
+						Sample unexplained document/keyword
+						<img src="img/anchor_sampling.png">
+					</section>												
+					<section>
+						<h3> Local Weighting </h3>
+						Reveal local topics & suppress global topics
+						<img src="img/local_weighting.png">
+					</section>															
+					<section>
+						<h3> Ensemble on Gradient Boosting </h3>
+						Repeat this process using gradient (i.e., residual values)<br>
+						<img src="img/overview.png">
+					</section>
 				</section>
 				<section>
 					<section>
-						<strong> Motivation </strong>
+						<h3> Proposed Solution <br>(Quantitative Experiment) </h3>
 					</section>
 					<section>
-						<ul>
-							<li>We want to discover topics, which <span class="fragment highlight">summarize</span> a large volume of contents(corpus)</li>
-							<li>Current topic modeling algorithms provide <span class="fragment highlight">global topics</span></li>
-							<li>They do NOT provide meaningful information as they are <span class="fragment highlight">general information we already know</span> </li>
-						</ul>
+						Topic Coherence
+						<img src="./img/topic_coherence.png" alt="Topic Coherence">
+					</section>	
+					<section>
+						Computing Time
+						<img src="./img/computing_time.png" alt="Computing Time">
 					</section>
 					<section>
-						<img src="img/global_topic_example.png">
-					</section>						
-					<section>
-						<p class="fragment fade-up" data-fragment-index="1">Can we create an algorithm that provides <span class="fragment highlight" data-fragment-index="2">local</span>, <span class="fragment highlight" data-fragment-index="2">focused</span> topics of interest for more <span class="fragment highlight" data-fragment-index="3">informative</span> topic discovery?</p>
+						Total Document Coverage
+						<img src="./img/total_doc_cvrg.png" alt="Total Document Coverage">
+					</section>											
 					</section>
-					<section>					
-						<p>How can we find local topics?</p>
-					</section>				
 				</section>	
 				<section>
 					<section>
-						<h3> Line of Reasoning </h3>
-						<br>					
-						<ul>
-							<li>NMF produces W, H where we use columns of W as topics of keywords</li>
-							<img src="img/nmf.png">
-						</ul>
-					</section>	
-					<section>
-						<h3> Line of Reasoning </h3>
-						<br>											
-						Residual matrix, R, represent <span class="fragment highlight">un</span>explained topics
-						<img src="img/residual_matrix.png">
-					</section>		
-					<section>
-						<img src="img/unexplained_parts.png" class="fragment fade-up">
+						<h3> Proposed Solution <br>(Qualitative Experiment) </h3>
 					</section>
 					<section>
-						<h3> Line of Reasoning </h3>
-						<br>					
-						<ul>
-							<li>A single iteration of NMF does NOT provide quality local topics</li>
-							<li class="fragment fade-up">Let's use <strong>ensemble model</strong> based on <strong>gradient boosting framework</strong> to iteratively boost up the values of local topics so that they become major topics</li>
-						</ul>
-					</section>															
-				</section>			
-				<section>
+						<p style="font-size:0.8em">
+							Topic examples from Twitter dataset <br>
+							(from New York City in June 2013)
+						</p>
+						<img src="./img/qualitative_exp.png" alt="Qualitative Experiment">
+						<p style="font-size:0.8em">
+							 We generated 100 topics (10 keywords each) but only <strong>L-EnsNMF</strong> extracted local, specific keywords, e.g., ‘<strong style="color:black">hurrican</strong>’, ‘<strong style="color:black">sandi</strong>’, ‘<strong style="color:black">ireland</strong>.’
+						</p>
+					</section>
 					<section>
-						<h3> Proposed solution </h3>
-					</section>				
-					<section>
-						<h3> Intuition</h3>
+						<p style="font-size:0.8em">
+							Topic examples from Twitter dataset <br>
+							(from New York City in June 2013)
+						</p>					
+						<img src="./img/qualitative_exp_ex.png" alt="Example for Qualitative Experiment">
 						<br>
+						<p style="font-size:0.7em">
+							A search for related web documents with the query ‘hurricane sandy ireland’ led to the discovery of the local news that the Ireland football team visited New York City in June 2013 to boost a community hit by Hurricane Sandy in 2012.						
+						</p>
 					</section>
-					<section>
-						<h3> Intuition</h3>
-						<br>					
-						<ul>
-							<li>Residual matrix after performing NMF can be regarded as <span class="fragment highlight">under-</span>represented topics</li>
-							<li>Thus, if we utilize residual matrix well, we can discover local topics</li>
-							<li class="fragment fade-up">Construct an ensemble of NMF models based on a gradient boosting framework </li>
-						</ul>						
-					</section>
-					<section>
-						<h3> Residual matrix</h3>
-						<br>					
-						<img src="img/residual_matrix.png">
-					</section>
-					<section>
-						<h3> Evaluation</h3>
-						<br>					
-					</section>
-					<section>
-						<h3> Evaluation</h3>
-						<br>					
-					</section>
-					<section>
-						<h3> Evaluation</h3>
-						<br>					
-					</section>										
-				</section>				
+				</section>					
 				<section>
 					<section>
-						<h3> Usage Scenario </h3>
-					</section>
-					<section>
-
-					</section>
-				</section>
+						<h3> Future Work</h3>
+					</section>	
+				</section>			
 				<section>
 					<br>
 					<p style="font-size:2.6em">Thank you</p>
