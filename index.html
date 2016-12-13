@@ -121,7 +121,7 @@
 					</section>					
 				</section>
 				<section>
-					<section>
+					<section data-transition="convex">
 						<h3>Proposed Method<br>(Details)</h3>
 					</section>
 <!-- 					<section>					
@@ -136,7 +136,7 @@
 						<img class="fragment fade-in" src="./img/arrow-down.png" style="width:2%"><br>
 						<img class="fragment fade-in" src="./img/nmf_for_topic_modeling.png" style="width:25%">
 					</section>			 -->			
-					<section>
+					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Overview of <strong>L-EnsNMF</strong></strong></span><br>
 						<img src="./img/overview.png" alt="Overview" style="width:90%">
 						<p style="text-align:left; font-size:0.9em">
@@ -146,7 +146,7 @@
 							<span class="fragment fade-in" data-fragment-index="5"> 3) Anchor Sampling & Local weighting <span class="fragment fade-in" data-fragment-index="6"> <br>-> <strong style="color:#0485b9">Reveal unexplained parts and suppress explained parts</strong></span> </span>
 						</p>
 					</section>	
-					<section>
+					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Nonnegative Matrix Factorization (NMF) 
 						<br> Topic Modeling	
 						</br></strong></span>
@@ -154,7 +154,7 @@
 						<br>
 						where [ <ul><li></li></ul>]<sub>+</sub> converts every negative element to zero
 					</section>								
-					<section>
+					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Residual Update</strong></span><br><br>
 						<strong style="color:black">Identify</strong> unexplained parts using residual matrix, R
 						<br><br>
@@ -162,13 +162,13 @@
 						'<strong style="color:black">overexplained</strong>' parts (i.e., negative values) => zero
 						<!-- Residual values represent <strong style="color:black">unexplained</strong> parts -->
 					</section>							
-					<section>
+					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Anchor Sampling</strong></span><br><br>
 						<strong style="color:black">Sample</strong> unexplained document(<em>col</em>) & keyword(<em>row</em>)
 						<br>
 						<img src="img/anchor_sampling.png">
 					</section>												
-					<section>
+					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Local Weighting</strong></span><br><br>
 						<strong style="color:black">Reveal</strong> <strong style="color:#0485b9">local topics</strong> & <strong style="color:black">suppress</strong> <strong style="color:red">global topics</strong>
 						<br>						
@@ -176,22 +176,22 @@
 						<br>
 						by localizing residual matrix, <strong style="color:black">R</strong>, and get <strong style="color:black">R<sub>L</sub></strong>
 					</section>															
-					<section>
+					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Ensemble</strong></span><br><br>
 						Use <strong style="color:black">R<sub>L</sub></strong> as an input to NMF topic modeling in the next stage<br><br>
 						<img src="./img/overview2.PNG" style="width:80%">
 					</section>
-					<section>
+					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Why NMF on Residual Matrices (1)</strong></span><br><br>
 						<img src="./img/synth_k2.png" alt="Synthetic Example">
 					</section>
-					<section>
+					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Why NMF on Residual Matrices (2)</strong></span><br><br>
 						<img src="./img/deflation.png" style="width:60%" alt="Synthetic Example">
 						<br>
 						<span style="font-size:0.9em">Deflation-based method helps to reveal <br>highly non-redundant, diverse topics</span>
 					</section>					
-					<section>
+					<section data-transition="convex">
 					<span style="font-size:1.3em"><strong style="color:black">Fast rank-2 NMF (Speed)</strong></span><br><br>
 						Exhaustive search for an <br>optimal active/passive set partitioning</strong><br>
 						<img src="./img/fast-rank2.png" alt="Fast rank-2" style="width:65%">
