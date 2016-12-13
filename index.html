@@ -156,10 +156,10 @@
 					</section>								
 					<section>
 						<span style="font-size:1.3em"><strong style="color:black">Residual Update</strong></span><br><br>
-						<strong style="color:black">Find</strong> unexplained parts using residual matrix, R
+						<strong style="color:black">Identify</strong> unexplained parts using residual matrix, R
 						<br><br>
 						<img src="img/residual_matrix.png">
-						Note that '<strong style="color:black">overexplained</strong>' parts are converted to 0 
+						'<strong style="color:black">overexplained</strong>' parts (i.e., negative values) => zero
 						<!-- Residual values represent <strong style="color:black">unexplained</strong> parts -->
 					</section>							
 					<section>
@@ -179,7 +179,7 @@
 					<section>
 						<span style="font-size:1.3em"><strong style="color:black">Ensemble</strong></span><br><br>
 						Use <strong style="color:black">R<sub>L</sub></strong> as an input to NMF topic modeling in the next stage<br><br>
-						<img src="img/overview_next2.png" style="width:80%">
+						<img src="img/overview2.png" style="width:80%">
 					</section>
 					<section>
 						<span style="font-size:1.3em"><strong style="color:black">Why NMF on Residual Matrices (1)</strong></span><br><br>
@@ -192,8 +192,8 @@
 						<span style="font-size:0.9em">Deflation-based method helps to reveal <br>highly non-redundant, diverse topics</span>
 					</section>					
 					<section>
-					<span style="font-size:1.3em"><strong style="color:black">Fast rank-2 NMF</strong></span><br><br>
-						Exhaustive search approach <br>for an optimal active/passive set partitioning</strong><br>
+					<span style="font-size:1.3em"><strong style="color:black">Fast rank-2 NMF (Speed)</strong></span><br><br>
+						Exhaustive search for an <br>optimal active/passive set partitioning</strong><br>
 						<img src="./img/fast-rank2.png" alt="Fast rank-2" style="width:65%">
 					</section>					
 				</section>
@@ -243,22 +243,35 @@
 						<h3> Qualitative <br>Topic Example </h3>
 					</section>
 					<section data-transition="convex">
-						<span style="font-size:1.3em"><strong style="color:black">Local Topic Discovery</strong></span><br><br>
+						<span style="font-size:1.3em"><strong style="color:black">Local Topic Discovery</strong></span><br>
 						<p style="font-size:0.8em">
 							 We generated 100 topics (10 keywords each) but only <strong>L-EnsNMF</strong> extracted local, specific keywords, e.g., ‘<strong style="color:black">hurrican</strong>’, ‘<strong style="color:black">sandi</strong>’, ‘<strong style="color:black">ireland</strong>.’
 						</p>
 						<img src="./img/qualitative_exp.png" alt="Qualitative Experiment">
-
+						<p style="font-size:0.8em">Dataset: Twitter (New York City in June 2013)</p>
 					</section>
 					<section data-transition="convex">
 						<span style="font-size:1.3em"><strong style="color:black">Local Topic Discovery</strong></span><br><br>
-						<p style="font-size:0.75em">
+						<p style="font-size:1em">
+							Ireland football team visited New York City in June 2013 <br>to boost a community hit by Hurricane Sandy in 2012
+						</p>
+						<!-- <p style="font-size:0.75em">
 							A search for related web documents with the query ‘<strong style="color:black">hurricane sandy ireland</strong>’ led to the <strong style="color:black">discovery of the local news</strong> that the Ireland football team visited New York City in June 2013 to boost a community hit by Hurricane Sandy in 2012		
-						</p>						
+						</p>					 -->	
 						<img src="./img/qualitative_exp_ex.png" alt="Example for Qualitative Experiment">
 					</section>
 
-				</section>			
+				</section>		
+				<section>
+						<section data-transition="convex">
+							<h3>Future Work</h3>
+						</section>
+						<section data-transition="convex">
+							<span style="font-size:1.3em"><strong style="color:black">Interactive Topic Discovery System</strong></span><br><br>
+							<img src="./img/utopian.png" alt="UTOPIAN" style="width:80%"><br>
+							Steer local weighting process to reflect <br>user's subjective interest and task goals
+						</section>
+					</section>	
 				<section>
 					<section data-transition="convex">
 						<h3>Conclusion</h3>
@@ -274,11 +287,11 @@
 					</section>
 				</section>							
 				<section>
-					<br>
 					<p style="font-size:2.6em">Muchas Gracias</p>
 					<p style="font-size:1.3em"> Questions? </p>
 					<p style="font-size:0.7em"> <strong style="color:black">E-mail</strong>: sh31659@gmail.com </p>
 					<p style="font-size:0.7em"> <strong style="color:black">Code</strong>: https://sanghosuh.github.io/lens_nmf-matlab </p>
+					<img src="./img/overview1.png" style="width:70%" alt="Overview">
 				</section>
 			</div>
 
